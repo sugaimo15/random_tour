@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>全国ガチャ旅 | ランダムで目的地・観光地・ご当地グルメを決める</title>
+<meta
+  name="description"
+  content="ガチャガチャを回して、次に行く目的地・観光地・ご当地グルメをランダムに決めるサイト。日本全国47都道府県から地方を絞って抽選できます。"
+/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/machine.css" />
+</head>
+<body>
+<div class="app">
+  <header class="site-header">
+    <h1 class="site-header__title">🎰 全国ガチャ旅</h1>
+    <p class="site-header__lead">
+      ガチャを回して、次の目的地・観光地・ご当地グルメをランダムに決めよう
+    </p>
+  </header>
+
+  <section aria-labelledby="category-heading">
+    <h2 id="category-heading" class="section-title">カテゴリを選ぶ</h2>
+    <div class="category-tabs" id="categoryTabs" role="group" aria-labelledby="category-heading">
+      <button type="button" class="category-tabs__btn" data-category="destination" aria-pressed="true">
+        📍 目的地
+      </button>
+      <button type="button" class="category-tabs__btn" data-category="spots" aria-pressed="false">
+        🗺️ 観光地
+      </button>
+      <button type="button" class="category-tabs__btn" data-category="foods" aria-pressed="false">
+        🍽️ 食べ物
+      </button>
+    </div>
+  </section>
+
+  <section aria-labelledby="region-heading">
+    <h2 id="region-heading" class="section-title">地方で絞り込む（任意）</h2>
+    <div class="region-filter" id="regionFilter" role="group" aria-labelledby="region-heading">
+      <button type="button" class="region-filter__btn" data-region="all" aria-pressed="true">すべて</button>
+      <button type="button" class="region-filter__btn" data-region="北海道" aria-pressed="false">北海道</button>
+      <button type="button" class="region-filter__btn" data-region="東北" aria-pressed="false">東北</button>
+      <button type="button" class="region-filter__btn" data-region="関東" aria-pressed="false">関東</button>
+      <button type="button" class="region-filter__btn" data-region="中部" aria-pressed="false">中部</button>
+      <button type="button" class="region-filter__btn" data-region="近畿" aria-pressed="false">近畿</button>
+      <button type="button" class="region-filter__btn" data-region="中国" aria-pressed="false">中国</button>
+      <button type="button" class="region-filter__btn" data-region="四国" aria-pressed="false">四国</button>
+      <button type="button" class="region-filter__btn" data-region="九州・沖縄" aria-pressed="false">九州・沖縄</button>
+    </div>
+  </section>
+
+  <section class="machine-stage" aria-label="ガチャガチャマシン">
+    <div class="gacha-machine" id="gachaMachine" data-phase="idle">
+      <div class="gacha-machine__dome">
+        <span class="capsule capsule--a" aria-hidden="true"></span>
+        <span class="capsule capsule--b" aria-hidden="true"></span>
+        <span class="capsule capsule--c" aria-hidden="true"></span>
+        <span class="capsule capsule--d" aria-hidden="true"></span>
+        <span class="capsule capsule--e" aria-hidden="true"></span>
+      </div>
+      <div class="gacha-machine__body">
+        <div class="gacha-machine__label">GACHA TRAVEL</div>
+        <button
+          type="button"
+          class="gacha-crank"
+          id="gachaCrank"
+          aria-label="ガチャのハンドルを回して抽選する"
+        >
+          <span class="gacha-crank__knob" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="gacha-machine__chute" aria-hidden="true">
+        <div class="falling-capsule" id="fallingCapsule">
+          <span class="falling-capsule__top"></span>
+          <span class="falling-capsule__bottom"></span>
+        </div>
+      </div>
+      <div class="gacha-machine__tray" id="gachaTray" aria-hidden="true">
+        <span class="tray-capsule__top" id="trayCapsuleTop"></span>
+        <span class="tray-capsule__bottom" id="trayCapsuleBottom"></span>
+      </div>
+    </div>
+
+    <button type="button" class="draw-btn" id="drawBtn">🎉 回す！</button>
+
+    <div class="result-panel">
+      <article class="result-card" id="resultCard" hidden aria-live="polite">
+        <div class="result-card__emoji" id="resultEmoji"></div>
+        <p class="result-card__sublabel" id="resultSublabel"></p>
+        <h3 class="result-card__name" id="resultName"></h3>
+        <p class="result-card__tagline" id="resultTagline"></p>
+        <p class="result-card__description" id="resultDescription"></p>
+      </article>
+
+      <div class="result-actions" id="resultActions" hidden>
+        <button type="button" class="btn-again" id="againBtn">🔄 もう一度回す</button>
+        <a class="btn-share" id="shareBtn" href="#" target="_blank" rel="noopener">🐦 Xでシェア</a>
+        <button type="button" class="btn-copy" id="copyBtn">📋 結果をコピー</button>
+      </div>
+      <p class="copy-feedback" id="copyFeedback" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>掲載情報は代表的な観光地・ご当地グルメの一例です。最新情報は現地・公式サイトでご確認ください。</p>
+  </footer>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/draw.js"></script>
+<script src="js/share.js"></script>
+<script src="js/machine.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
