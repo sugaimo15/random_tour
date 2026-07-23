@@ -19,6 +19,7 @@
   var resultSublabel = document.getElementById("resultSublabel");
   var resultName = document.getElementById("resultName");
   var resultDescription = document.getElementById("resultDescription");
+  var resultMapFrame = document.getElementById("resultMapFrame");
   var resultActions = document.getElementById("resultActions");
 
   var againBtn = document.getElementById("againBtn");
@@ -44,6 +45,7 @@
     resultSublabel.textContent = result.sublabel;
     resultName.textContent = result.name;
     resultDescription.textContent = result.description || "";
+    resultMapFrame.src = window.Share.buildMapEmbedUrl(result);
 
     resultCard.hidden = true;
     // 一度hiddenを付け直してから外すことで、毎回リビール演出をリスタートさせる

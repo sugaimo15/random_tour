@@ -92,11 +92,19 @@
         <p class="result-card__sublabel" id="resultSublabel"></p>
         <h3 class="result-card__name" id="resultName"></h3>
         <p class="result-card__description" id="resultDescription"></p>
+        <div class="result-map">
+          <iframe
+            id="resultMapFrame"
+            title="結果の地図"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </article>
 
       <div class="result-actions" id="resultActions" hidden>
         <button type="button" class="btn-again" id="againBtn">🔄 もう一度回す</button>
-        <a class="btn-map" id="mapBtn" href="#" target="_blank" rel="noopener">🗺️ 地図で見る</a>
+        <a class="btn-map" id="mapBtn" href="#" target="_blank" rel="noopener">🗺️ 大きな地図で見る</a>
         <a class="btn-share" id="shareBtn" href="#" target="_blank" rel="noopener">🐦 Xでシェア</a>
         <button type="button" class="btn-copy" id="copyBtn">📋 結果をコピー</button>
       </div>
