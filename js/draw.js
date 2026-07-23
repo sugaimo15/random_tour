@@ -17,33 +17,20 @@
     });
 
     var units = [];
+    var listName =
+      category === "destination" ? "destinations" : category === "spots" ? "spots" : "foods";
 
-    if (category === "destination") {
-      candidates.forEach(function (pref) {
+    candidates.forEach(function (pref) {
+      pref[listName].forEach(function (item) {
         units.push({
-          key: pref.id,
-          emoji: pref.emoji,
-          name: pref.name,
-          sublabel: pref.region,
-          tagline: pref.destination.tagline,
-          description: pref.destination.description,
+          key: pref.id + "|" + item.name,
+          emoji: item.emoji,
+          name: item.name,
+          sublabel: pref.name,
+          description: item.description,
         });
       });
-    } else if (category === "spots" || category === "foods") {
-      var listName = category === "spots" ? "spots" : "foods";
-      candidates.forEach(function (pref) {
-        pref[listName].forEach(function (item) {
-          units.push({
-            key: pref.id + "|" + item.name,
-            emoji: item.emoji,
-            name: item.name,
-            sublabel: pref.name,
-            tagline: "",
-            description: item.description,
-          });
-        });
-      });
-    }
+    });
 
     return units;
   }
@@ -80,7 +67,6 @@
         emoji: choice.emoji,
         name: choice.name,
         sublabel: choice.sublabel,
-        tagline: choice.tagline,
         description: choice.description,
       };
     },

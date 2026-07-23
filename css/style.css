@@ -209,12 +209,6 @@ body {
   color: var(--color-primary-dark);
 }
 
-.result-card__tagline {
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  font-weight: 600;
-}
-
 .result-card__description {
   font-size: 0.9rem;
   color: var(--color-text);

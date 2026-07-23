@@ -18,7 +18,6 @@
   var resultEmoji = document.getElementById("resultEmoji");
   var resultSublabel = document.getElementById("resultSublabel");
   var resultName = document.getElementById("resultName");
-  var resultTagline = document.getElementById("resultTagline");
   var resultDescription = document.getElementById("resultDescription");
   var resultActions = document.getElementById("resultActions");
 
@@ -39,26 +38,10 @@
     drawBtn.setAttribute("aria-busy", disabled ? "true" : "false");
   }
 
-  function sublabelText(result) {
-    if (result.category === "destination") {
-      return result.sublabel + "地方";
-    }
-    return result.sublabel;
-  }
-
   function renderResult(result) {
     resultEmoji.textContent = result.emoji || "";
-    resultSublabel.textContent = sublabelText(result);
+    resultSublabel.textContent = result.sublabel;
     resultName.textContent = result.name;
-
-    if (result.tagline) {
-      resultTagline.textContent = result.tagline;
-      resultTagline.hidden = false;
-    } else {
-      resultTagline.textContent = "";
-      resultTagline.hidden = true;
-    }
-
     resultDescription.textContent = result.description || "";
 
     resultCard.hidden = true;
