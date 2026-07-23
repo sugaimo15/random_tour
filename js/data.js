@@ -12,10 +12,10 @@
       name: "北海道",
       region: "北海道",
       emoji: "🐄",
-      destination: {
-        tagline: "雄大な自然とグルメの宝庫",
-        description: "広大な大地に牧場、雪原、湿原が広がる日本最北の道。四季を通じて食と自然を楽しめる。",
-      },
+      destinations: [
+        { name: "札幌市", emoji: "🏙️", description: "北海道の中心都市。新鮮な海鮮とスープカレー、ラーメンが楽しめるグルメの都。" },
+        { name: "函館市", emoji: "🌃", description: "異国情緒あふれる港町で、函館山からの夜景は日本三大夜景のひとつ。" },
+      ],
       spots: [
         { name: "富良野・美瑛の丘", emoji: "🌾", description: "パッチワークのような丘陵地帯が広がる北海道らしい絶景。" },
         { name: "小樽運河", emoji: "🏮", description: "レンガ倉庫とガス灯が並ぶノスタルジックな運河沿いの散策路。" },
@@ -32,7 +32,10 @@
       name: "青森県",
       region: "東北",
       emoji: "🍎",
-      destination: { tagline: "ねぶた祭とりんごの郷", description: "本州最北端、津軽の自然とねぶた祭の熱気が魅力の県。" },
+      destinations: [
+        { name: "青森市", emoji: "🏮", description: "本州最北の港町。夏には勇壮なねぶた祭で街全体が熱気に包まれる。" },
+        { name: "弘前市", emoji: "🌸", description: "津軽藩の城下町。弘前城の桜とりんご畑が広がる風情ある街。" },
+      ],
       spots: [
         { name: "弘前城", emoji: "🌸", description: "桜の名所として知られる津軽藩の名城。" },
         { name: "奥入瀬渓流", emoji: "🌲", description: "苔むした岩と清流が織りなす渓流散策の名所。" },
@@ -47,7 +50,10 @@
       name: "岩手県",
       region: "東北",
       emoji: "🦌",
-      destination: { tagline: "詩情あふれる北東北の大地", description: "宮沢賢治ゆかりの自然と歴史ある平泉の文化遺産が残る県。" },
+      destinations: [
+        { name: "盛岡市", emoji: "🍚", description: "南部藩の城下町として栄えた県都。わんこそばや盛岡冷麺などご当地グルメも豊富。" },
+        { name: "平泉町", emoji: "⛩️", description: "奥州藤原氏が築いた黄金文化の里。中尊寺金色堂など世界遺産が残る。" },
+      ],
       spots: [
         { name: "中尊寺金色堂", emoji: "⛩️", description: "奥州藤原氏が築いた黄金に輝く世界遺産のお堂。" },
         { name: "龍泉洞", emoji: "💧", description: "透き通るコバルトブルーの地底湖で知られる日本三大鍾乳洞。" },
@@ -62,7 +68,10 @@
       name: "宮城県",
       region: "東北",
       emoji: "🦪",
-      destination: { tagline: "杜の都と日本三景の海", description: "緑豊かな仙台の街並みと松島の絶景を併せ持つ東北の中心地。" },
+      destinations: [
+        { name: "仙台市", emoji: "🌳", description: "杜の都と呼ばれる緑豊かな東北随一の都市。牛タンなどのグルメも人気。" },
+        { name: "松島町", emoji: "🏝️", description: "大小260もの島々が浮かぶ日本三景の絶景を望む港町。" },
+      ],
       spots: [
         { name: "松島", emoji: "🏝️", description: "大小260もの島々が浮かぶ日本三景のひとつ。" },
         { name: "仙台城跡", emoji: "🏯", description: "伊達政宗が築いた青葉山の城跡から仙台市街を一望できる。" },
@@ -77,7 +86,10 @@
       name: "秋田県",
       region: "東北",
       emoji: "🍚",
-      destination: { tagline: "きりたんぽとなまはげの国", description: "豪雪と米どころが育んだ独自の食文化と伝統行事が息づく県。" },
+      destinations: [
+        { name: "秋田市", emoji: "🎐", description: "竿燈まつりで知られる県都。米どころならではの日本酒とグルメが自慢。" },
+        { name: "仙北市", emoji: "🏘️", description: "角館の武家屋敷と神秘的な田沢湖を抱く自然豊かな町。" },
+      ],
       spots: [
         { name: "角館の武家屋敷", emoji: "🏘️", description: "しだれ桜と黒板塀の武家屋敷が並ぶ「みちのくの小京都」。" },
         { name: "田沢湖", emoji: "🌊", description: "日本一の水深を誇る神秘的なコバルトブルーの湖。" },
@@ -92,7 +104,10 @@
       name: "山形県",
       region: "東北",
       emoji: "🍒",
-      destination: { tagline: "さくらんぼ香る雪国", description: "果樹王国として知られ、蔵王の樹氷や温泉も楽しめる県。" },
+      destinations: [
+        { name: "山形市", emoji: "♨️", description: "蔵王の樹氷と将棋駒の産地として知られる県都。" },
+        { name: "鶴岡市", emoji: "⛩️", description: "出羽三山の門前町として栄え、独自の庄内食文化が息づく。" },
+      ],
       spots: [
         { name: "山寺（立石寺）", emoji: "⛩️", description: "松尾芭蕉が句を詠んだ、断崖に建つ千段以上の石段の名刹。" },
         { name: "銀山温泉", emoji: "♨️", description: "大正ロマン漂う木造旅館が並ぶノスタルジックな温泉街。" },
@@ -107,7 +122,10 @@
       name: "福島県",
       region: "東北",
       emoji: "🍑",
-      destination: { tagline: "会津の歴史と桃の里", description: "会津の武家文化と豊かな果樹園が広がる東北の南の玄関口。" },
+      destinations: [
+        { name: "会津若松市", emoji: "🏯", description: "鶴ヶ城がそびえる会津の中心地。喜多方ラーメンや会津の郷土料理も名物。" },
+        { name: "南会津町", emoji: "🏘️", description: "大内宿など茅葺き屋根の集落が残る、山あいの静かな里。" },
+      ],
       spots: [
         { name: "鶴ヶ城（会津若松城）", emoji: "🏯", description: "赤瓦が美しい、幕末の戊辰戦争でも知られる名城。" },
         { name: "大内宿", emoji: "🏘️", description: "茅葺き屋根の宿場町がそのまま残る江戸時代の面影を伝える集落。" },
@@ -124,7 +142,10 @@
       name: "茨城県",
       region: "関東",
       emoji: "🌸",
-      destination: { tagline: "水と花の景勝地", description: "花の名所と豊かな海の幸に恵まれた関東の農業・漁業大国。" },
+      destinations: [
+        { name: "水戸市", emoji: "🌸", description: "偕楽園の梅と納豆で知られる茨城の県都。" },
+        { name: "ひたちなか市", emoji: "🌼", description: "国営ひたち海浜公園のネモフィラやコキアで彩られる港町。" },
+      ],
       spots: [
         { name: "国営ひたち海浜公園", emoji: "🌼", description: "ネモフィラやコキアなど四季折々の花が丘一面を彩る公園。" },
         { name: "袋田の滝", emoji: "💦", description: "四段に落ちることから「四度の滝」とも呼ばれる日本三名瀑。" },
@@ -139,7 +160,10 @@
       name: "栃木県",
       region: "関東",
       emoji: "⛩️",
-      destination: { tagline: "日光の社寺と餃子の街", description: "世界遺産の社寺と高原リゾートを併せ持つ北関東の観光地。" },
+      destinations: [
+        { name: "宇都宮市", emoji: "🥟", description: "餃子の街として全国的に名高い栃木の県都。" },
+        { name: "日光市", emoji: "⛩️", description: "世界遺産の日光東照宮と那須の高原自然を併せ持つ観光都市。" },
+      ],
       spots: [
         { name: "日光東照宮", emoji: "⛩️", description: "「日光を見ずして結構と言うなかれ」と称される豪華絢爛な世界遺産。" },
         { name: "那須高原", emoji: "🏔️", description: "避暑地として愛される、牧場と温泉が広がる高原リゾート。" },
@@ -154,7 +178,10 @@
       name: "群馬県",
       region: "関東",
       emoji: "♨️",
-      destination: { tagline: "名湯とだるまの里", description: "名湯揃いの温泉地と近代産業遺産を持つ関東北西部の県。" },
+      destinations: [
+        { name: "前橋市", emoji: "🏞️", description: "赤城山麓に広がる群馬の県都。詩情豊かな街並みが特徴。" },
+        { name: "草津町", emoji: "♨️", description: "湯畑を中心に発展した、日本三名泉に数えられる名湯の町。" },
+      ],
       spots: [
         { name: "草津温泉", emoji: "♨️", description: "湯畑を中心に発展した、日本三名泉に数えられる名湯。" },
         { name: "富岡製糸場", emoji: "🏭", description: "日本の近代化を支えた世界遺産の製糸工場。" },
@@ -169,7 +196,10 @@
       name: "埼玉県",
       region: "関東",
       emoji: "🏯",
-      destination: { tagline: "小江戸と武蔵野の風情", description: "江戸情緒の残る町並みと自然豊かなスポットが点在する県。" },
+      destinations: [
+        { name: "さいたま市", emoji: "🏙️", description: "大宮を中心に発展する埼玉の県都。スポーツやイベントも盛ん。" },
+        { name: "川越市", emoji: "🏮", description: "小江戸と呼ばれる蔵造りの町並みが残る人気の観光地。" },
+      ],
       spots: [
         { name: "川越の蔵造りの町並み", emoji: "🏮", description: "「小江戸」と呼ばれる蔵造りの商家が並ぶ人気の観光地。" },
         { name: "秩父の芝桜", emoji: "🌸", description: "羊山公園を一面ピンクに染める春の絶景。" },
@@ -184,7 +214,10 @@
       name: "千葉県",
       region: "関東",
       emoji: "🏖️",
-      destination: { tagline: "海とテーマパークの県", description: "テーマパークから房総の海岸線まで多彩な楽しみ方ができる県。" },
+      destinations: [
+        { name: "千葉市", emoji: "🌊", description: "東京湾に面する千葉の県都。歴史ある成田山にも近い。" },
+        { name: "浦安市", emoji: "🎡", description: "テーマパークで世界的に知られる、東京湾岸の街。" },
+      ],
       spots: [
         { name: "成田山新勝寺", emoji: "⛩️", description: "初詣参拝者数全国有数を誇る真言宗の古刹。" },
         { name: "房総半島の海岸", emoji: "🌊", description: "サーフィンや海水浴で人気の太平洋に面した美しい海岸線。" },
@@ -199,7 +232,10 @@
       name: "東京都",
       region: "関東",
       emoji: "🗼",
-      destination: { tagline: "伝統と最先端が交差する首都", description: "下町の風情と最先端のカルチャーが同居する日本の首都。" },
+      destinations: [
+        { name: "千代田区", emoji: "🏯", description: "皇居と官公庁街が広がる、日本の政治・行政の中心地。" },
+        { name: "台東区", emoji: "🏮", description: "浅草の雷門と仲見世通りでにぎわう、下町情緒あふれるエリア。" },
+      ],
       spots: [
         { name: "浅草・浅草寺", emoji: "🏮", description: "雷門と仲見世通りでにぎわう東京屈指の下町観光地。" },
         { name: "明治神宮", emoji: "🌳", description: "都心とは思えぬ緑豊かな杜に包まれた広大な神社。" },
@@ -214,7 +250,10 @@
       name: "神奈川県",
       region: "関東",
       emoji: "⛩️",
-      destination: { tagline: "港町と古都鎌倉", description: "モダンな港町横浜と、武家文化の香る古都鎌倉が共存する県。" },
+      destinations: [
+        { name: "横浜市", emoji: "🎡", description: "港町情緒とみなとみらいの近未来的な景観が同居する国際都市。" },
+        { name: "鎌倉市", emoji: "⛩️", description: "鎌倉大仏や鶴岡八幡宮など、武家文化の香る古都。" },
+      ],
       spots: [
         { name: "鎌倉大仏（高徳院）", emoji: "🗿", description: "鎌倉のシンボルとして知られる高さ約11メートルの国宝の大仏。" },
         { name: "横浜みなとみらい", emoji: "🎡", description: "観覧車や高層ビルが並ぶ横浜港の近未来的なベイエリア。" },
@@ -231,7 +270,10 @@
       name: "新潟県",
       region: "中部",
       emoji: "🍶",
-      destination: { tagline: "米どころ、酒どころ", description: "コシヒカリと日本酒で知られる豪雪地帯、佐渡島も抱える県。" },
+      destinations: [
+        { name: "新潟市", emoji: "🍶", description: "日本海に面する米どころの県都。日本酒と海の幸が自慢。" },
+        { name: "佐渡市", emoji: "🏝️", description: "金山遺跡とトキの生息地として知られる日本海最大の島。" },
+      ],
       spots: [
         { name: "佐渡島", emoji: "🏝️", description: "金山遺跡とトキの生息地で知られる日本海最大の島。" },
         { name: "苗場・湯沢の雪景色", emoji: "⛷️", description: "上質なパウダースノーで知られる日本屈指のスキーリゾート。" },
@@ -246,7 +288,10 @@
       name: "富山県",
       region: "中部",
       emoji: "🏔️",
-      destination: { tagline: "立山黒部と寒ブリの海", description: "3000メートル級の山々と富山湾の海の幸が隣り合う県。" },
+      destinations: [
+        { name: "富山市", emoji: "🏔️", description: "立山連峰を望む、水と緑に恵まれた富山の県都。" },
+        { name: "南砺市", emoji: "🏠", description: "五箇山の合掌造り集落が残る、世界遺産の山里。" },
+      ],
       spots: [
         { name: "立山黒部アルペンルート", emoji: "🏔️", description: "雪の大谷など雄大な山岳景観を楽しめる山岳観光ルート。" },
         { name: "五箇山合掌造り集落", emoji: "🏠", description: "白川郷と並ぶ、急勾配の茅葺き屋根が並ぶ世界遺産の集落。" },
@@ -261,7 +306,10 @@
       name: "石川県",
       region: "中部",
       emoji: "🐟",
-      destination: { tagline: "加賀百万石と金沢グルメ", description: "武家文化と伝統工芸、豊かな海の幸が息づく加賀百万石の地。" },
+      destinations: [
+        { name: "金沢市", emoji: "🌳", description: "兼六園に代表される、加賀百万石の風情漂う城下町。" },
+        { name: "輪島市", emoji: "🏮", description: "輪島朝市と輪島塗の伝統工芸で知られる能登半島の町。" },
+      ],
       spots: [
         { name: "兼六園", emoji: "🌳", description: "日本三名園のひとつに数えられる、四季折々の美しい大名庭園。" },
         { name: "金沢21世紀美術館", emoji: "🎨", description: "円形ガラス張りが印象的な現代アートの人気美術館。" },
@@ -276,7 +324,10 @@
       name: "福井県",
       region: "中部",
       emoji: "🦕",
-      destination: { tagline: "恐竜と越前ガニの国", description: "恐竜化石の一大産地であり、冬は越前ガニで賑わう県。" },
+      destinations: [
+        { name: "福井市", emoji: "🦕", description: "恐竜博物館で知られる、恐竜のまちとして人気の県都。" },
+        { name: "坂井市", emoji: "🌊", description: "断崖絶壁が続く景勝地、東尋坊を擁する港町。" },
+      ],
       spots: [
         { name: "東尋坊", emoji: "🌊", description: "日本海の荒波が削った断崖絶壁が1キロ以上続く景勝地。" },
         { name: "福井県立恐竜博物館", emoji: "🦖", description: "世界三大恐竜博物館のひとつに数えられる大迫力の展示施設。" },
@@ -291,7 +342,10 @@
       name: "山梨県",
       region: "中部",
       emoji: "🍇",
-      destination: { tagline: "富士山とぶどうの国", description: "富士山の裾野に広がる湖と、日本一のぶどう・ワイン産地。" },
+      destinations: [
+        { name: "甲府市", emoji: "🍇", description: "武田信玄ゆかりの史跡が残る、ぶどうとワインの県都。" },
+        { name: "富士河口湖町", emoji: "🗻", description: "富士山と河口湖の絶景が広がる、人気のリゾートエリア。" },
+      ],
       spots: [
         { name: "富士五湖", emoji: "🗻", description: "富士山を湖面に映す、河口湖をはじめとする五つの湖。" },
         { name: "昇仙峡", emoji: "🍁", description: "奇岩と渓流美が織りなす、日本一とも称される渓谷美。" },
@@ -306,7 +360,10 @@
       name: "長野県",
       region: "中部",
       emoji: "⛰️",
-      destination: { tagline: "日本アルプスと信州そば", description: "日本アルプスに抱かれた山岳リゾートと信州の食文化の県。" },
+      destinations: [
+        { name: "長野市", emoji: "⛩️", description: "善光寺の門前町として栄え、多くの参拝者を集める県都。" },
+        { name: "松本市", emoji: "🏯", description: "国宝松本城がそびえる、北アルプスを望む城下町。" },
+      ],
       spots: [
         { name: "上高地", emoji: "🏔️", description: "梓川と穂高連峰が織りなす、日本屈指の山岳景勝地。" },
         { name: "松本城", emoji: "🏯", description: "現存する日本最古級の五重六階の天守を持つ国宝の城。" },
@@ -321,7 +378,10 @@
       name: "岐阜県",
       region: "中部",
       emoji: "🏘️",
-      destination: { tagline: "白川郷と飛騨の名湯", description: "合掌造り集落と飛騨高山の古い町並みが残る山あいの県。" },
+      destinations: [
+        { name: "高山市", emoji: "🏘️", description: "飛騨の小京都と称される、古い町並みが残る観光都市。" },
+        { name: "白川村", emoji: "🏠", description: "合掌造り集落が残る、世界遺産に登録された山里。" },
+      ],
       spots: [
         { name: "白川郷", emoji: "🏠", description: "急勾配の茅葺き屋根が並ぶ、世界遺産の合掌造り集落。" },
         { name: "下呂温泉", emoji: "♨️", description: "日本三名泉のひとつに数えられる、なめらかな湯が自慢の名湯。" },
@@ -336,7 +396,10 @@
       name: "静岡県",
       region: "中部",
       emoji: "🍵",
-      destination: { tagline: "富士山とお茶の産地", description: "富士山の絶景と日本一のお茶の生産量を誇る太平洋岸の県。" },
+      destinations: [
+        { name: "静岡市", emoji: "🍵", description: "駿河湾と富士山を望む、お茶の産地として知られる県都。" },
+        { name: "熱海市", emoji: "♨️", description: "相模湾を望む景勝地に湧く、古くから愛される温泉リゾート。" },
+      ],
       spots: [
         { name: "富士山本宮浅間大社", emoji: "🗻", description: "富士山信仰の総本宮で、雄大な富士の姿を望める。" },
         { name: "熱海温泉", emoji: "♨️", description: "相模湾を望む景勝地に湧く、古くから愛される温泉地。" },
@@ -351,7 +414,10 @@
       name: "愛知県",
       region: "中部",
       emoji: "🏯",
-      destination: { tagline: "ものづくりと名古屋めし", description: "自動車産業を牽引する工業県であり、独自の食文化を持つ都市。" },
+      destinations: [
+        { name: "名古屋市", emoji: "🏯", description: "名古屋城がそびえる、ものづくりと独自のグルメ文化を誇る中部随一の都市。" },
+        { name: "犬山市", emoji: "🏯", description: "国宝犬山城が木曽川を望む、風情ある城下町。" },
+      ],
       spots: [
         { name: "名古屋城", emoji: "🏯", description: "金の鯱鉾で知られる、徳川家康ゆかりの名城。" },
         { name: "熱田神宮", emoji: "⛩️", description: "三種の神器のひとつ草薙神剣を祀る、伊勢神宮に次ぐ格式の神社。" },
@@ -368,7 +434,10 @@
       name: "三重県",
       region: "近畿",
       emoji: "⛩️",
-      destination: { tagline: "伊勢神宮と海の幸", description: "日本人の心のふるさと伊勢神宮と、豊かな海の幸に恵まれた県。" },
+      destinations: [
+        { name: "伊勢市", emoji: "⛩️", description: "伊勢神宮の門前町として栄える、日本人の心のふるさと。" },
+        { name: "鳥羽市", emoji: "🦞", description: "海女漁とリアス海岸の絶景で知られる、伊勢志摩の港町。" },
+      ],
       spots: [
         { name: "伊勢神宮", emoji: "⛩️", description: "日本人が一生に一度は訪れたいと願う、皇室ゆかりの最高格式の神社。" },
         { name: "熊野古道", emoji: "🥾", description: "世界遺産に登録された、熊野三山へ続く古の参詣道。" },
@@ -383,7 +452,10 @@
       name: "滋賀県",
       region: "近畿",
       emoji: "🌊",
-      destination: { tagline: "琵琶湖のほとりの古都", description: "日本最大の湖・琵琶湖を中心に、歴史ある城下町が広がる県。" },
+      destinations: [
+        { name: "大津市", emoji: "🌊", description: "琵琶湖畔に広がる、水と歴史に恵まれた滋賀の県都。" },
+        { name: "彦根市", emoji: "🏯", description: "国宝彦根城が残る、井伊家ゆかりの城下町。" },
+      ],
       spots: [
         { name: "琵琶湖", emoji: "🌊", description: "面積・貯水量ともに日本一を誇る「近畿の水がめ」。" },
         { name: "彦根城", emoji: "🏯", description: "国宝五城のひとつに数えられる、井伊家ゆかりの美しい天守。" },
@@ -398,7 +470,10 @@
       name: "京都府",
       region: "近畿",
       emoji: "⛩️",
-      destination: { tagline: "千年の都、古都の風情", description: "神社仏閣と伝統文化が今も息づく、日本を代表する古都。" },
+      destinations: [
+        { name: "京都市", emoji: "⛩️", description: "神社仏閣と伝統文化が息づく、千年の都と称される古都。" },
+        { name: "宮津市", emoji: "🌲", description: "天橋立の絶景で知られる、日本海に面した港町。" },
+      ],
       spots: [
         { name: "清水寺", emoji: "⛩️", description: "「清水の舞台」で知られる、京都を象徴する世界遺産の寺院。" },
         { name: "伏見稲荷大社", emoji: "⛩️", description: "千本鳥居が続く幻想的な参道で世界的に人気の神社。" },
@@ -413,7 +488,10 @@
       name: "大阪府",
       region: "近畿",
       emoji: "🐙",
-      destination: { tagline: "食い倒れの町、天下の台所", description: "陽気な人情と粉もん文化が根付く、西日本随一の商業都市。" },
+      destinations: [
+        { name: "大阪市", emoji: "🐙", description: "食い倒れの町として知られる、西日本随一の商業都市。" },
+        { name: "堺市", emoji: "🏛️", description: "百舌鳥古墳群が残る、古くから貿易で栄えた歴史都市。" },
+      ],
       spots: [
         { name: "大阪城", emoji: "🏯", description: "豊臣秀吉が築いた、大阪のシンボルとして知られる名城。" },
         { name: "道頓堀", emoji: "🎆", description: "ネオンきらめくグリコサインで有名な、大阪ミナミの繁華街。" },
@@ -428,7 +506,10 @@
       name: "兵庫県",
       region: "近畿",
       emoji: "🏯",
-      destination: { tagline: "港町神戸と白鷺の城", description: "異国情緒漂う港町神戸と、世界遺産の名城を擁する県。" },
+      destinations: [
+        { name: "神戸市", emoji: "⛵", description: "異国情緒あふれるおしゃれな港町。神戸牛など食も充実。" },
+        { name: "姫路市", emoji: "🏯", description: "白鷺城とも呼ばれる世界遺産・姫路城がそびえる城下町。" },
+      ],
       spots: [
         { name: "姫路城", emoji: "🏯", description: "白鷺城の異名を持つ、日本初の世界文化遺産に登録された名城。" },
         { name: "神戸港・北野異人館街", emoji: "⛵", description: "港町らしい異国情緒あふれる街並みが広がる人気エリア。" },
@@ -443,7 +524,10 @@
       name: "奈良県",
       region: "近畿",
       emoji: "🦌",
-      destination: { tagline: "鹿と大仏の古都", description: "日本最古の都のひとつとして栄えた、歴史遺産の宝庫。" },
+      destinations: [
+        { name: "奈良市", emoji: "🦌", description: "東大寺の大仏と鹿で親しまれる、日本最古級の古都。" },
+        { name: "吉野町", emoji: "🌸", description: "一目千本と称される桜の名所として知られる、歴史ある山里。" },
+      ],
       spots: [
         { name: "東大寺", emoji: "🗿", description: "奈良の大仏で知られる、世界最大級の木造建築を誇る寺院。" },
         { name: "奈良公園", emoji: "🦌", description: "野生の鹿が自由に歩き回る、市民や観光客に愛される広大な公園。" },
@@ -458,7 +542,10 @@
       name: "和歌山県",
       region: "近畿",
       emoji: "🐟",
-      destination: { tagline: "熊野の聖地とみかんの里", description: "熊野信仰の聖地と温暖な気候が育むみかんで知られる県。" },
+      destinations: [
+        { name: "和歌山市", emoji: "🏯", description: "紀州徳川家の城下町として栄えた、和歌山の県都。" },
+        { name: "高野町", emoji: "⛩️", description: "弘法大師空海が開いた、真言密教の聖地が広がる山里。" },
+      ],
       spots: [
         { name: "高野山", emoji: "⛩️", description: "弘法大師空海が開いた、真言密教の聖地として知られる霊場。" },
         { name: "那智の滝", emoji: "💦", description: "落差日本一を誇る、熊野三山のひとつ那智大社の御神体の滝。" },
@@ -475,7 +562,10 @@
       name: "鳥取県",
       region: "中国",
       emoji: "🏜️",
-      destination: { tagline: "日本最大の砂丘", description: "雄大な砂丘と豊かな海の幸を誇る、山陰の県。" },
+      destinations: [
+        { name: "鳥取市", emoji: "🏜️", description: "日本最大級の海岸砂丘、鳥取砂丘を抱える県都。" },
+        { name: "倉吉市", emoji: "🏘️", description: "白壁土蔵群が残る、情緒ある商家町。" },
+      ],
       spots: [
         { name: "鳥取砂丘", emoji: "🏜️", description: "風が作り出す風紋が美しい、日本最大級の海岸砂丘。" },
         { name: "三徳山三佛寺投入堂", emoji: "⛰️", description: "断崖絶壁に建つ、日本一危険な国宝ともいわれる神秘的なお堂。" },
@@ -490,7 +580,10 @@
       name: "島根県",
       region: "中国",
       emoji: "⛩️",
-      destination: { tagline: "神話の国、出雲", description: "縁結びの神様を祀る出雲大社と、銀山遺跡で知られる県。" },
+      destinations: [
+        { name: "松江市", emoji: "🏯", description: "堀川めぐりが人気の、水の都と称される城下町。" },
+        { name: "出雲市", emoji: "⛩️", description: "縁結びの神様、出雲大社の門前町として知られる。" },
+      ],
       spots: [
         { name: "出雲大社", emoji: "⛩️", description: "縁結びの神様として全国から参拝者が訪れる由緒ある大社。" },
         { name: "石見銀山", emoji: "⛏️", description: "かつて世界の銀の三分の一を産出したとされる世界遺産の鉱山跡。" },
@@ -505,7 +598,10 @@
       name: "岡山県",
       region: "中国",
       emoji: "🍑",
-      destination: { tagline: "晴れの国、桃太郎伝説", description: "晴天率の高さと、桃太郎伝説ゆかりの果物どころとして知られる県。" },
+      destinations: [
+        { name: "岡山市", emoji: "🌳", description: "岡山後楽園を擁する、桃太郎伝説ゆかりの県都。" },
+        { name: "倉敷市", emoji: "🏘️", description: "白壁の蔵屋敷と柳並木が美しい、美観地区で知られる町。" },
+      ],
       spots: [
         { name: "岡山後楽園", emoji: "🌳", description: "日本三名園のひとつに数えられる、広々とした美しい大名庭園。" },
         { name: "倉敷美観地区", emoji: "🏘️", description: "白壁の蔵屋敷と柳並木の運河が織りなす、江戸情緒残る町並み。" },
@@ -520,7 +616,10 @@
       name: "広島県",
       region: "中国",
       emoji: "⛩️",
-      destination: { tagline: "平和と瀬戸内の絶景", description: "平和への祈りと、瀬戸内海の美しい景観を持つ県。" },
+      destinations: [
+        { name: "広島市", emoji: "🕊️", description: "平和記念都市として世界的に知られる、中国地方随一の都市。" },
+        { name: "廿日市市", emoji: "⛩️", description: "海に浮かぶ大鳥居で有名な、厳島神社(宮島)を擁する町。" },
+      ],
       spots: [
         { name: "厳島神社（宮島）", emoji: "⛩️", description: "海に浮かぶ朱色の大鳥居で知られる世界遺産の神社。" },
         { name: "原爆ドーム", emoji: "🕊️", description: "平和への祈りを込めて保存される、世界遺産の被爆建造物。" },
@@ -535,7 +634,10 @@
       name: "山口県",
       region: "中国",
       emoji: "🐡",
-      destination: { tagline: "維新の地とふぐの本場", description: "明治維新の志士を輩出した歴史と、ふぐの本場として知られる県。" },
+      destinations: [
+        { name: "山口市", emoji: "🏘️", description: "西の京と称される、大内文化が息づく県都。" },
+        { name: "岩国市", emoji: "🌉", description: "五連のアーチが美しい錦帯橋がかかる城下町。" },
+      ],
       spots: [
         { name: "錦帯橋", emoji: "🌉", description: "五連の美しいアーチが特徴的な、日本三名橋のひとつ。" },
         { name: "秋吉台", emoji: "🌿", description: "日本最大級のカルスト台地と鍾乳洞が広がる雄大な景観。" },
@@ -552,7 +654,10 @@
       name: "徳島県",
       region: "四国",
       emoji: "🕺",
-      destination: { tagline: "阿波おどりと渦潮の国", description: "熱狂の阿波おどりと、自然が生み出す渦潮の迫力を誇る県。" },
+      destinations: [
+        { name: "徳島市", emoji: "🕺", description: "阿波おどりで街全体が熱気に包まれる、徳島の県都。" },
+        { name: "三好市", emoji: "🌉", description: "祖谷渓のかずら橋など秘境の景観で知られる山里。" },
+      ],
       spots: [
         { name: "鳴門の渦潮", emoji: "🌀", description: "潮の満ち引きで生まれる、世界最大級の渦潮の迫力を間近で楽しめる。" },
         { name: "祖谷のかずら橋", emoji: "🌉", description: "シラクチカズラで編まれた、秘境祖谷渓に架かるスリル満点の吊り橋。" },
@@ -567,7 +672,10 @@
       name: "香川県",
       region: "四国",
       emoji: "🍜",
-      destination: { tagline: "うどん県として知られる島国", description: "うどん文化と瀬戸内海の島々のアートで知られるコンパクトな県。" },
+      destinations: [
+        { name: "高松市", emoji: "⛴️", description: "瀬戸内海の玄関口として栄える、香川の県都。" },
+        { name: "琴平町", emoji: "⛩️", description: "こんぴらさんの愛称で親しまれる、金刀比羅宮の門前町。" },
+      ],
       spots: [
         { name: "金刀比羅宮（こんぴらさん）", emoji: "⛩️", description: "「一生に一度はこんぴら参り」と称される、長い石段で有名な神社。" },
         { name: "直島", emoji: "🎨", description: "草間彌生の水玉かぼちゃなど現代アートが点在する瀬戸内の島。" },
@@ -582,7 +690,10 @@
       name: "愛媛県",
       region: "四国",
       emoji: "🍊",
-      destination: { tagline: "みかんと道後の名湯", description: "柑橘の甘い香りと、日本最古といわれる温泉が魅力の県。" },
+      destinations: [
+        { name: "松山市", emoji: "♨️", description: "道後温泉と松山城で知られる、四国最大級の城下町。" },
+        { name: "今治市", emoji: "🚴", description: "しまなみ海道の起点であり、タオルの産地としても有名。" },
+      ],
       spots: [
         { name: "道後温泉", emoji: "♨️", description: "日本最古の温泉のひとつとされ、多くの文人にも愛された名湯。" },
         { name: "松山城", emoji: "🏯", description: "現存12天守のひとつに数えられる、松山市街を見下ろす名城。" },
@@ -597,7 +708,10 @@
       name: "高知県",
       region: "四国",
       emoji: "🐟",
-      destination: { tagline: "黒潮と坂本龍馬の土地", description: "太平洋の黒潮が育む豊かな海の幸と、幕末の志士を生んだ土地。" },
+      destinations: [
+        { name: "高知市", emoji: "🎏", description: "よさこい祭りと坂本龍馬ゆかりの史跡で知られる県都。" },
+        { name: "四万十市", emoji: "🛶", description: "最後の清流と称される四万十川が流れる、自然豊かな町。" },
+      ],
       spots: [
         { name: "桂浜", emoji: "🌊", description: "坂本龍馬の銅像が太平洋を望んで立つ、月の名所としても有名な浜。" },
         { name: "四万十川", emoji: "🛶", description: "「最後の清流」と称される、ダムのない雄大な一級河川。" },
@@ -614,7 +728,10 @@
       name: "福岡県",
       region: "九州・沖縄",
       emoji: "🍜",
-      destination: { tagline: "九州の玄関口、屋台とグルメの街", description: "食と交通の要衝として栄える、九州最大の都市を擁する県。" },
+      destinations: [
+        { name: "福岡市", emoji: "🏮", description: "屋台とグルメで賑わう、九州最大の都市。" },
+        { name: "太宰府市", emoji: "⛩️", description: "学問の神様、菅原道真を祀る太宰府天満宮の門前町。" },
+      ],
       spots: [
         { name: "太宰府天満宮", emoji: "⛩️", description: "学問の神様菅原道真を祀る、受験生に人気の由緒ある神社。" },
         { name: "博多の屋台街", emoji: "🏮", description: "中洲や天神に軒を連ねる、夜な夜な賑わう博多名物の屋台。" },
@@ -629,7 +746,10 @@
       name: "佐賀県",
       region: "九州・沖縄",
       emoji: "🏺",
-      destination: { tagline: "陶磁器と吉野ヶ里の歴史", description: "弥生時代の遺跡と、世界に誇る焼き物の産地で知られる県。" },
+      destinations: [
+        { name: "佐賀市", emoji: "🎈", description: "バルーンフェスタで知られる、佐賀の県都。" },
+        { name: "有田町", emoji: "🏺", description: "400年以上の歴史を誇る、有田焼の産地として知られる町。" },
+      ],
       spots: [
         { name: "吉野ヶ里遺跡", emoji: "🏛️", description: "弥生時代最大級の環壕集落跡が復元された国内屈指の史跡公園。" },
         { name: "有田・伊万里の窯元", emoji: "🏺", description: "400年の歴史を持つ、日本を代表する磁器の産地。" },
@@ -644,7 +764,10 @@
       name: "長崎県",
       region: "九州・沖縄",
       emoji: "⛪",
-      destination: { tagline: "異国情緒あふれる港町", description: "鎖国時代から海外との窓口として栄えた、異文化が香る港町。" },
+      destinations: [
+        { name: "長崎市", emoji: "⛪", description: "異国情緒あふれる港町。グラバー園など洋館が点在する。" },
+        { name: "佐世保市", emoji: "🌷", description: "ハウステンボスが広がる、花と光に彩られた港町。" },
+      ],
       spots: [
         { name: "グラバー園", emoji: "🏛️", description: "洋館が立ち並ぶ、長崎港を見下ろす異国情緒あふれる庭園。" },
         { name: "ハウステンボス", emoji: "🌷", description: "オランダの街並みを再現した、花と光の大規模テーマパーク。" },
@@ -659,7 +782,10 @@
       name: "熊本県",
       region: "九州・沖縄",
       emoji: "🐻",
-      destination: { tagline: "阿蘇の大自然と熊本城", description: "世界最大級のカルデラを持つ活火山と、名城を擁する県。" },
+      destinations: [
+        { name: "熊本市", emoji: "🏯", description: "熊本城がそびえる、九州中部の中心都市。" },
+        { name: "阿蘇市", emoji: "🌋", description: "世界最大級のカルデラを抱く、雄大な高原の町。" },
+      ],
       spots: [
         { name: "熊本城", emoji: "🏯", description: "加藤清正が築いた、日本三名城のひとつに数えられる壮麗な城。" },
         { name: "阿蘇山", emoji: "🌋", description: "世界最大級のカルデラを持つ、雄大な景観の活火山。" },
@@ -674,7 +800,10 @@
       name: "大分県",
       region: "九州・沖縄",
       emoji: "♨️",
-      destination: { tagline: "日本一の温泉県", description: "源泉数・湧出量ともに日本一を誇る、温泉天国として知られる県。" },
+      destinations: [
+        { name: "大分市", emoji: "🌊", description: "別府湾に面する、大分の県都。" },
+        { name: "別府市", emoji: "♨️", description: "湯けむり漂う、源泉数・湧出量ともに日本一の温泉郷。" },
+      ],
       spots: [
         { name: "別府温泉", emoji: "♨️", description: "地獄めぐりでも知られる、多彩な泉質を誇る日本屈指の温泉地。" },
         { name: "由布院温泉", emoji: "🏔️", description: "由布岳を望む、洗練された旅館とカフェが並ぶ人気の温泉地。" },
@@ -689,7 +818,10 @@
       name: "宮崎県",
       region: "九州・沖縄",
       emoji: "🌺",
-      destination: { tagline: "南国情緒漂う神話の地", description: "神話伝説の残る峡谷と、南国ムード漂う海岸線が広がる県。" },
+      destinations: [
+        { name: "宮崎市", emoji: "🌺", description: "南国ムード漂う、フェニックスの並木道が印象的な県都。" },
+        { name: "高千穂町", emoji: "💦", description: "神話伝説の残る高千穂峡の絶景で知られる山里。" },
+      ],
       spots: [
         { name: "高千穂峡", emoji: "💦", description: "柱状節理の断崖と真名井の滝が織りなす、神話ゆかりの美しい峡谷。" },
         { name: "青島神社", emoji: "🌴", description: "「鬼の洗濯板」と呼ばれる奇岩に囲まれた、南国風情の神社。" },
@@ -704,7 +836,10 @@
       name: "鹿児島県",
       region: "九州・沖縄",
       emoji: "🌋",
-      destination: { tagline: "桜島と黒豚の南国", description: "活火山桜島と、世界遺産の屋久島を擁する南九州の県。" },
+      destinations: [
+        { name: "鹿児島市", emoji: "🌋", description: "今なお噴煙を上げる桜島を望む、南国情緒あふれる県都。" },
+        { name: "屋久島町", emoji: "🌲", description: "樹齢数千年の縄文杉が茂る、世界自然遺産の島。" },
+      ],
       spots: [
         { name: "桜島", emoji: "🌋", description: "今なお噴煙を上げ続ける、鹿児島のシンボルである活火山。" },
         { name: "屋久島", emoji: "🌲", description: "樹齢数千年の縄文杉で知られる、世界自然遺産の島。" },
@@ -719,7 +854,10 @@
       name: "沖縄県",
       region: "九州・沖縄",
       emoji: "🌺",
-      destination: { tagline: "碧い海と琉球文化の楽園", description: "エメラルドグリーンの海と、独自の琉球文化が息づく南の島。" },
+      destinations: [
+        { name: "那覇市", emoji: "🌺", description: "国際通りで賑わう、沖縄の政治・経済の中心地。" },
+        { name: "恩納村", emoji: "🏖️", description: "エメラルドグリーンの海が広がる、沖縄屈指のリゾートエリア。" },
+      ],
       spots: [
         { name: "首里城", emoji: "🏯", description: "琉球王国の栄華を伝える、赤瓦が印象的な世界遺産の城跡。" },
         { name: "美ら海水族館", emoji: "🐋", description: "巨大なジンベエザメが泳ぐ大水槽で知られる人気の水族館。" },

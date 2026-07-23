@@ -60,13 +60,13 @@ random_tour/
   name: "北海道",
   region: "北海道", // 北海道/東北/関東/中部/近畿/中国/四国/九州・沖縄
   emoji: "🐄",
-  destination: { tagline: "...", description: "..." },
+  destinations: [ { name, emoji, description }, ... ], // 代表的な市区町村
   spots: [ { name, emoji, description }, ... ],
   foods:  [ { name, emoji, description }, ... ],
 }
 ```
 
-観光地・ご当地グルメを追加・編集したい場合は、該当都道府県の `spots` / `foods` 配列に項目を追加してください。
+目的地カテゴリは都道府県ではなく市区町村単位で抽選されます。目的地・観光地・ご当地グルメを追加・編集したい場合は、該当都道府県の `destinations` / `spots` / `foods` 配列に項目を追加してください。
 
 ## データ・免責について
 
