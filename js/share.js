@@ -30,9 +30,17 @@
     );
   }
 
+  function mapQuery(result) {
+    return result.sublabel ? result.sublabel + " " + result.name : result.name;
+  }
+
   function buildMapUrl(result) {
-    var query = result.sublabel ? result.sublabel + " " + result.name : result.name;
-    return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(query);
+    return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(mapQuery(result));
+  }
+
+  function buildMapEmbedUrl(result) {
+    // APIキー不要のGoogleマップ埋め込み方式（output=embed）。
+    return "https://maps.google.com/maps?q=" + encodeURIComponent(mapQuery(result)) + "&output=embed";
   }
 
   function copyText(result) {
@@ -54,6 +62,7 @@
     buildShareText: buildShareText,
     buildTweetUrl: buildTweetUrl,
     buildMapUrl: buildMapUrl,
+    buildMapEmbedUrl: buildMapEmbedUrl,
     copyText: copyText,
   };
 })();
