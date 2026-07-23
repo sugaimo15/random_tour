@@ -30,6 +30,11 @@
     );
   }
 
+  function buildMapUrl(result) {
+    var query = result.sublabel ? result.sublabel + " " + result.name : result.name;
+    return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(query);
+  }
+
   function copyText(result) {
     var text = buildShareText(result);
     if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -48,6 +53,7 @@
   window.Share = {
     buildShareText: buildShareText,
     buildTweetUrl: buildTweetUrl,
+    buildMapUrl: buildMapUrl,
     copyText: copyText,
   };
 })();

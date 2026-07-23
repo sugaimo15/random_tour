@@ -22,6 +22,7 @@
   var resultActions = document.getElementById("resultActions");
 
   var againBtn = document.getElementById("againBtn");
+  var mapBtn = document.getElementById("mapBtn");
   var shareBtn = document.getElementById("shareBtn");
   var copyBtn = document.getElementById("copyBtn");
   var copyFeedback = document.getElementById("copyFeedback");
@@ -51,6 +52,7 @@
     resultActions.hidden = false;
 
     shareBtn.href = window.Share.buildTweetUrl(result);
+    mapBtn.href = window.Share.buildMapUrl(result);
     copyFeedback.textContent = "";
 
     copyBtn.onclick = function () {
