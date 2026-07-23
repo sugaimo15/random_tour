@@ -1,0 +1,380 @@
+/* ── ガチャガチャマシンの見た目とアニメーション ── */
+
+.gacha-machine {
+  --anim-scale: 1;
+  width: min(78vw, 260px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* ドーム */
+.gacha-machine__dome {
+  width: 100%;
+  aspect-ratio: 1 / 0.82;
+  border-radius: 50% 50% 46% 46% / 62% 62% 38% 38%;
+  background: radial-gradient(
+      circle at 34% 28%,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.12) 42%,
+      rgba(255, 255, 255, 0) 70%
+    ),
+    linear-gradient(160deg, #ffe1cf, #ffb199 70%);
+  box-shadow: inset 0 -10px 16px rgba(0, 0, 0, 0.1), inset 0 6px 10px rgba(255, 255, 255, 0.6),
+    0 10px 16px rgba(120, 80, 40, 0.18);
+  border: 3px solid rgba(255, 255, 255, 0.65);
+  position: relative;
+  overflow: hidden;
+}
+
+.capsule {
+  position: absolute;
+  width: 17%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.capsule::before,
+.capsule::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.capsule::before {
+  top: 0;
+  background: var(--color-secondary);
+}
+
+.capsule::after {
+  bottom: 0;
+  background: #fff8ee;
+}
+
+.capsule--a {
+  top: 20%;
+  left: 18%;
+  animation-delay: 0s;
+}
+.capsule--b {
+  top: 38%;
+  left: 55%;
+  width: 20%;
+  animation-delay: 0.2s;
+}
+.capsule--b::before {
+  background: #ffcf4d;
+}
+.capsule--c {
+  top: 55%;
+  left: 30%;
+  width: 15%;
+  animation-delay: 0.4s;
+}
+.capsule--c::before {
+  background: var(--color-primary);
+}
+.capsule--d {
+  top: 22%;
+  left: 68%;
+  width: 14%;
+  animation-delay: 0.1s;
+}
+.capsule--d::before {
+  background: #7ab8ff;
+}
+.capsule--e {
+  top: 58%;
+  left: 58%;
+  width: 16%;
+  animation-delay: 0.3s;
+}
+.capsule--e::before {
+  background: #c48bff;
+}
+
+.gacha-machine[data-phase="idle"] .capsule {
+  animation: domeIdle calc(3s * var(--anim-scale)) ease-in-out infinite;
+}
+
+.gacha-machine[data-phase="cranking"] .capsule {
+  animation: domeJiggle calc(0.55s * var(--anim-scale)) ease-in-out;
+}
+
+/* 本体 */
+.gacha-machine__body {
+  width: 92%;
+  margin-top: -10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: linear-gradient(160deg, var(--color-primary), var(--color-primary-dark));
+  box-shadow: 0 8px 14px rgba(120, 40, 20, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.gacha-machine__label {
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+}
+
+.gacha-crank {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, #fff, #e4e4e4);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), inset 0 2px 3px rgba(255, 255, 255, 0.85);
+  position: relative;
+  flex-shrink: 0;
+  transition: transform calc(0.25s * var(--anim-scale)) ease-out;
+}
+
+.gacha-crank__knob {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  width: 9px;
+  height: 13px;
+  margin-left: -4.5px;
+  border-radius: 4px;
+  background: var(--color-secondary-dark);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.gacha-machine[data-phase="cranking"] .gacha-crank {
+  animation: crankTurn calc(0.55s * var(--anim-scale)) cubic-bezier(0.34, 1.4, 0.64, 1) forwards;
+}
+
+.gacha-machine:not([data-phase="idle"]):not([data-phase="cranking"]) .gacha-crank {
+  transform: rotate(300deg);
+}
+
+/* シュート（落下口） */
+.gacha-machine__chute {
+  width: 34px;
+  height: 30px;
+  margin-top: 2px;
+  border-radius: 4px 4px 8px 8px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.05));
+  position: relative;
+}
+
+.falling-capsule {
+  position: absolute;
+  left: 50%;
+  top: -4px;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-radius: 50%;
+  opacity: 0;
+  overflow: hidden;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+.falling-capsule__top,
+.falling-capsule__bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.falling-capsule__top {
+  top: 0;
+  background: var(--color-primary);
+}
+
+.falling-capsule__bottom {
+  bottom: 0;
+  background: #fff8ee;
+}
+
+.gacha-machine[data-phase="dropping"] .falling-capsule {
+  animation: capsuleDrop calc(0.5s * var(--anim-scale)) cubic-bezier(0.55, 0, 1, 0.4) forwards;
+}
+
+/* 受け皿（トレイ） */
+.gacha-machine__tray {
+  width: 100%;
+  min-height: 54px;
+  margin-top: 6px;
+  border-radius: 10px;
+  background: linear-gradient(160deg, #3a2f22, #292016);
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.tray-capsule__top,
+.tray-capsule__bottom {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 26px;
+  height: 13px;
+  margin-left: -13px;
+  opacity: 0;
+}
+
+.tray-capsule__top {
+  margin-top: -13px;
+  border-radius: 26px 26px 0 0;
+  background: var(--color-primary);
+  transform-origin: 50% 100%;
+}
+
+.tray-capsule__bottom {
+  margin-top: 0;
+  border-radius: 0 0 26px 26px;
+  background: #fff8ee;
+  transform-origin: 50% 0%;
+}
+
+.gacha-machine[data-phase="landing"] .tray-capsule__top,
+.gacha-machine[data-phase="landing"] .tray-capsule__bottom {
+  animation: capsuleBounce calc(0.5s * var(--anim-scale)) ease-out forwards;
+}
+
+.gacha-machine[data-phase="cracking"] .tray-capsule__top {
+  animation: crackTop calc(0.45s * var(--anim-scale)) ease-in forwards;
+}
+
+.gacha-machine[data-phase="cracking"] .tray-capsule__bottom {
+  animation: crackBottom calc(0.45s * var(--anim-scale)) ease-in forwards;
+}
+
+/* ── keyframes ── */
+@keyframes domeIdle {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(4deg);
+  }
+}
+
+@keyframes domeJiggle {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-2px, 1px);
+  }
+  50% {
+    transform: translate(2px, -2px);
+  }
+  75% {
+    transform: translate(-1px, 2px);
+  }
+}
+
+@keyframes crankTurn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(300deg);
+  }
+}
+
+@keyframes capsuleDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) rotate(0deg);
+  }
+  15% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(26px) rotate(140deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(34px) rotate(160deg);
+  }
+}
+
+@keyframes capsuleBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-18px) scale(1, 1);
+  }
+  10% {
+    opacity: 1;
+  }
+  35% {
+    transform: translateY(0) scaleX(1.25) scaleY(0.72);
+  }
+  55% {
+    transform: translateY(-9px) scaleX(0.92) scaleY(1.08);
+  }
+  75% {
+    transform: translateY(0) scaleX(1.1) scaleY(0.9);
+  }
+  90% {
+    transform: translateY(-3px) scaleX(0.97) scaleY(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1, 1);
+  }
+}
+
+@keyframes crackTop {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-10px, -18px) rotate(-50deg) scale(0.9);
+  }
+}
+
+@keyframes crackBottom {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(10px, 10px) rotate(40deg) scale(0.9);
+  }
+}
+
+@keyframes cardReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.result-card:not([hidden]) {
+  animation: cardReveal calc(0.4s * var(--anim-scale, 1)) ease-out;
+}
+
+/* ── 動きを抑える設定を尊重 ── */
+@media (prefers-reduced-motion: reduce) {
+  .gacha-machine,
+  .result-card {
+    --anim-scale: 0.05;
+  }
+}
