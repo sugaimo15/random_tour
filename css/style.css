@@ -125,6 +125,20 @@ body {
   color: #fff;
 }
 
+/* ── 都道府県フィルタ ── */
+.prefecture-filter {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-soft);
+  border: 1.5px solid var(--color-border);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  font-family: inherit;
+}
+
 /* ── ガチャマシンエリア ── */
 .machine-stage {
   display: flex;
