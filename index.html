@@ -9,6 +9,23 @@
   content="ガチャガチャを回して、次に行く目的地・観光地・ご当地グルメをランダムに決めるサイト。日本全国47都道府県から地方を絞って抽選できます。"
 />
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<!-- Google Fontsは装飾目的の任意リソース。media="print"+onloadで読み込みを
+     非ブロッキングにし、取得できない/遅いネットワークでもシステムフォントで
+     即座に表示・操作できるようにしている。 -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap"
+  rel="stylesheet"
+  media="print"
+  onload="this.media='all'"
+/>
+<noscript>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap"
+    rel="stylesheet"
+  />
+</noscript>
 <link rel="stylesheet" href="css/reset.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/machine.css" />
@@ -16,7 +33,10 @@
 <body>
 <div class="app">
   <header class="site-header">
-    <h1 class="site-header__title">🎰 全国ガチャ旅</h1>
+    <h1 class="site-header__title">
+      <span class="site-header__title-emoji" aria-hidden="true">🎰</span>
+      <span class="site-header__title-text">全国ガチャ旅</span>
+    </h1>
     <p class="site-header__lead">
       ガチャを回して、次の目的地・観光地・ご当地グルメをランダムに決めよう
     </p>
